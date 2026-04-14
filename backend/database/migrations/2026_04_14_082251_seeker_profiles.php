@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('city')->nullable();
             $table->boolean('open_to_remote')->default(true);
             $table->boolean('available')->default(true);
-
+$table->foreignId('user_id')->constrained()->cascadeOnDelete();
 
             $table->timestamps();
         });
